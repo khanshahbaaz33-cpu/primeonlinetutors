@@ -1,621 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prime Online Tutors - Achieve Academic Success</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Online Tutor</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8fafc;
-      color: #1a202c;
-      line-height: 1.6;
-    }
+    body { background: #f9fafb; color: #333; line-height: 1.6; }
 
-    /* Header Styles */
     header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      background: linear-gradient(135deg, #4F46E5, #9333EA);
       color: white;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+      text-align: center;
     }
 
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; }
+
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
     }
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo-section img {
-      height: 50px;
-      border-radius: 8px;
-    }
-
-    .logo-text {
-      font-size: 1.8em;
-      font-weight: 700;
-    }
-
-    .header-cta {
-      display: flex;
-      gap: 15px;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      border-radius: 6px;
+    nav a {
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: none;
-      font-size: 1em;
+      font-weight: bold;
+      transition: 0.3s;
     }
+    nav a:hover { color: #facc15; }
 
-    .btn-primary {
-      background-color: #f59e0b;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background-color: #d97706;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn-outline:hover {
-      background-color: white;
-      color: #1e3a8a;
-    }
-
-    /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      padding: 3rem 2rem;
+      text-align: center;
+      background: #eef2ff;
+    }
+    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .hero button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: #4F46E5;
       color: white;
-      padding: 80px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover { background: #4338ca; }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
       text-align: center;
     }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 3.5em;
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-
-    .hero .subtitle {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px 0;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2.5em;
-      font-weight: 700;
-      display: block;
-      color: #f59e0b;
-    }
-
-    .stat-label {
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
-
-    /* Main Content */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin: 80px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title {
-      font-size: 2.5em;
-      color: #1e3a8a;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-
-    .section-subtitle {
-      font-size: 1.2em;
-      color: #6b7280;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Features Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .feature-card {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-
-    .feature-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 2em;
-      color: white;
-    }
-
-    .feature-title {
-      font-size: 1.4em;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #1e3a8a;
-    }
-
-    .feature-description {
-      color: #6b7280;
-      line-height: 1.6;
-    }
-
-    /* Student Success Stories */
-    .success-stories {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      padding: 80px 20px;
-      margin: 80px -20px;
-    }
-
-    .stories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .story-card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .student-score {
-      font-size: 2.5em;
-      font-weight: 700;
-      color: #059669;
-      margin-bottom: 10px;
-    }
-
-    .student-name {
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #1e3a8a;
-    }
-
-    .student-details {
-      color: #6b7280;
-      margin-bottom: 15px;
-    }
-
-    .subjects-tutored {
-      background: #dbeafe;
-      color: #1e3a8a;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      font-weight: 600;
-    }
-
-    /* How We Work */
-    .process-steps {
+    .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-top: 50px;
+      gap: 1.5rem;
     }
-
-    .step {
-      text-align: center;
-      position: relative;
-    }
-
-    .step-number {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
-      font-weight: 700;
-      margin: 0 auto 20px;
-    }
-
-    .step-title {
-      font-size: 1.3em;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #1e3a8a;
-    }
-
-    .step-description {
-      color: #6b7280;
-    }
-
-    /* Subjects Section */
-    .subjects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .subject-tag {
+    .card {
       background: white;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      border-left: 4px solid #3b82f6;
+      transition: 0.3s;
     }
+    .card:hover { transform: translateY(-5px); }
 
-    .subject-tag:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-
-    /* Contact Section */
-    .contact-section {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      color: white;
-      padding: 80px 20px;
-      margin: 80px -20px 0;
+    /* Why Online Tutoring Section */
+    .why-online-tutoring {
+      background: #fff;
+      padding: 60px 20px;
       text-align: center;
     }
 
-    .contact-content {
-      max-width: 600px;
+    .why-online-tutoring h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4F46E5;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 10px;
     }
 
-    .contact-section .section-title {
-      color: white;
+    .benefit-card {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease-in-out;
+      text-align: left;
     }
 
-    .contact-info {
-      font-size: 1.2em;
-      margin: 30px 0;
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      border-color: #4F46E5;
     }
 
-    .contact-info a {
-      color: #f59e0b;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .demo-btn {
-      background: #f59e0b;
-      color: white;
-      padding: 18px 40px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2em;
+    .benefit-card h3 {
+      font-size: 20px;
       font-weight: 600;
-      display: inline-block;
-      margin-top: 30px;
-      transition: all 0.3s ease;
+      color: #2c3e50;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 30px;
     }
 
-    .demo-btn:hover {
-      background: #d97706;
-      transform: translateY(-2px);
+    .benefit-card h3::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #4F46E5;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    /* Footer */
+    .benefit-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
     footer {
-      background: #1a202c;
-      color: #e2e8f0;
-      padding: 40px 20px;
+      background: #111827;
+      color: #d1d5db;
       text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
     }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .hero h1 {
-        font-size: 2.5em;
-      }
-
-      .hero-stats {
-        gap: 20px;
-      }
-
-      .section-title {
-        font-size: 2em;
-      }
-
-      .features-grid,
-      .stories-grid,
-      .process-steps {
-        grid-template-columns: 1fr;
-      }
-    }
+    footer a { color: #facc15; text-decoration: none; }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="header-content">
-      <div class="logo-section">
-        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fc4855c0-9ef0-4847-9ec1-4122b3369f99.png" alt="Prime Online Tutors Logo" />
-        <div class="logo-text">Prime Online Tutors</div>
-      </div>
-      <div class="header-cta">
-        <a href="#contact" class="btn btn-outline">Contact Us</a>
-        <a href="[GOOGLE_FORM_LINK]" class="btn btn-primary" target="_blank">Book Free Demo</a>
-      </div>
-    </div>
+    <h1>Prime Online Tutor</h1>
+    <p>Personalized Learning. Global Connections.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Achieve Academic Success with Top-Notch Online Tutoring</h1>
-      <p class="subtitle">Trusted by parents and students globally • 1-on-1 Online tutoring for CBSE, ICSE, IGCSE, IB & more</p>
-      
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">1000+</span>
-          <span class="stat-label">Students Taught</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">50+</span>
-          <span class="stat-label">Subjects</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">25+</span>
-          <span class="stat-label">Countries</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Guaranteed Results</span>
-        </div>
-      </div>
+<section class="hero">
+  <h2>Learn Smarter, Not Harder</h2>
+  <p>Expert tutors in Math, Science, and more – guiding you to academic success.</p>
+  <a href="https://forms.gle/9ZyXiQZoTGMXNvzg9" target="_blank" rel="noopener noreferrer">
+    <button>Get Started</button>
+  </a>
+</section>
 
-      <a href="[GOOGLE_FORM_LINK]" class="btn btn-primary" target="_blank" style="font-size: 1.2em; padding: 18px 40px;">Start Learning Today - Book Free Demo!</a>
+  <section class="section" id="about">
+    <h3>Why Choose Us?</h3>
+    <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem;">
+      At Prime Online Tutor, we believe in making education simple, effective, and accessible.
+      Our tutors bring years of experience in solving past papers, preparing for exams, and
+      building strong subject foundations.
+    </p>
+  </section>
+
+  <section class="section" id="services">
+    <h3>Our Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Math Tutoring</h4>
+        <p>Step-by-step guidance to solve complex problems and excel in exams.</p>
+      </div>
+      <div class="card">
+        <h4>Science Tutoring</h4>
+        <p>Physics, Chemistry, Biology – simplified for better understanding.</p>
+      </div>
+      <div class="card">
+        <h4>Exam Preparation</h4>
+        <p>Special focus on AS/A Level past papers to ensure top grades.</p>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section id="why-choose-us">
-      <div class="section-header">
-        <h2 class="section-title">Why Choose Prime Online Tutors?</h2>
-        <p class="section-subtitle">Unlock your potential with tailored one-to-one online tutoring</p>
-      </div>
+  <!-- Why Online Tutoring Section -->
+  <section class="why-online-tutoring" id="benefits">
+    <h2>What Makes Online Tutoring a Better Option than Home Tuition?</h2>
+    <div class="benefits-grid">
       
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3 class="feature-title">Flexible Scheduling</h3>
-          <p class="feature-description">We offer flexible scheduling to fit your routine, making it easy to choose times that work for you.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">📚</div>
-          <h3 class="feature-title">Personalized Lesson Plans</h3>
-          <p class="feature-description">Tailored lessons to meet your needs, plus recorded sessions for review anytime.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">🎓</div>
-          <h3 class="feature-title">Expert Tutors 24/7</h3>
-          <p class="feature-description">Access expert help around the clock, whether it's for homework or understanding tough concepts.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">👨‍🏫</div>
-          <h3 class="feature-title">Same Tutor Long-Term</h3>
-          <p class="feature-description">Benefit from consistency and trust with the same tutor throughout your learning journey.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3 class="feature-title">Performance Reports</h3>
-          <p class="feature-description">Track your academic progress with detailed reports, providing valuable insights for students and parents.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">🏆</div>
-          <h3 class="feature-title">Proven Results</h3>
-          <p class="feature-description">Our students consistently achieve better grades and confidence with long-term academic improvement.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="success-stories">
-      <div class="section-header">
-        <h2 class="section-title" style="color: #1e3a8a;">Our Students' Success</h2>
-        <p class="section-subtitle">We're proud of our students' achievements and their academic success</p>
-      </div>
-      
-      <div class="stories-grid">
-        <div class="story-card">
-          <div class="student-score">94%</div>
-          <div class="subjects-tutored">Physics & Chemistry</div>
-        </div>
-        
-        <div class="story-card">
-          <div class="student-score">92%</div>
-          <div class="subjects-tutored">Mathematics</div>
-        </div>
-        
-        <div class="story-card">
-          <div class="student-score">95%</div>
-          <div class="subjects-tutored">Maths & Science</div>
-        </div>
-        
-        <div class="story-card">
-          <div class="student-score">89%</div>
-          <div class="subjects-tutored">Chemistry & Biology</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-we-work">
-      <div class="section-header">
-        <h2 class="section-title">How We Work</h2>
-        <p class="section-subtitle">Start your learning adventure with Prime Online Tutors today!</p>
-      </div>
-      
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3 class="step-title">Connect with Academic Advisors</h3>
-          <p class="step-description">Receive tailored guidance from our expert team to understand your learning needs.</p>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3 class="step-title">Free 30-Minute Demo</h3>
-          <p class="step-description">Experience a live session with your tutor — try it out for free!</p>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3 class="step-title">Customized Plans</h3>
-          <p class="step-description">We'll design lesson plans and schedules that fit your unique needs.</p>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">4</div>
-          <h3 class="step-title">Track Your Progress</h3>
-          <p class="step-description">Enjoy regular feedback to keep you on the path to improvement.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="subjects">
-      <div class="section-header">
-        <h2 class="section-title">Subjects We Cover</h2>
-        <p class="section-subtitle">Comprehensive tutoring across multiple curricula and subjects</p>
-      </div>
-      
-      <div class="subjects-grid">
-        <div class="subject-tag">Mathematics</div>
-        <div class="subject-tag">Physics</div>
-        <div class="subject-tag">Chemistry</div>
-        <div class="subject-tag">Biology</div>
-        <div class="subject-tag">English</div>
-        <div class="subject-tag">Computer Science</div>
-        <div class="subject-tag">Economics</div>
-        <div class="subject-tag">Business Studies</div>
-        <div class="subject-tag">Accountancy</div>
-        <div class="subject-tag">Social Studies</div>
-        <div class="subject-tag">French</div>
-        <div class="subject-tag">Statistics</div>
+      <div class="benefit-card">
+        <h3>Highly-Qualified Tutors</h3>
+        <p>Our tutors are subject-certified with strong academic backgrounds and years of experience in preparing students for success.</p>
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <h4 style="color: #7c3aed; margin-bottom: 20px;">Curricula We Support:</h4>
-        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-          <span style="background: #ede9fe; color: #7c3aed; padding: 10px 20px; border-radius: 20px; font-weight: 600;">CBSE</span>
-          <span style="background: #ede9fe; color: #7c3aed; padding: 10px 20px; border-radius: 20px; font-weight: 600;">ICSE/ISC</span>
-          <span style="background: #ede9fe; color: #7c3aed; padding: 10px 20px; border-radius: 20px; font-weight: 600;">IGCSE</span>
-          <span style="background: #ede9fe; color: #7c3aed; padding: 10px 20px; border-radius: 20px; font-weight: 600;">IB</span>
-          <span style="background: #ede9fe; color: #7c3aed; padding: 10px 20px; border-radius: 20px; font-weight: 600;">A & AS Level</span>
-        </div>
+      <div class="benefit-card">
+        <h3>Flexible Scheduling</h3>
+        <p>Plan sessions around your convenience, whether early mornings, evenings, or weekends — learning that adapts to you.</p>
       </div>
-    </section>
-  </main>
 
-  <section class="contact-section" id="contact">
-    <div class="contact-content">
-      <h2 class="section-title">Ready to Start Your Success Journey?</h2>
-      <p style="font-size: 1.2em; margin-bottom: 30px;">Get in touch to schedule your first tutoring session or to learn more</p>
-      
-      <div class="contact-info">
-        <p>📧 Email: <a href="mailto:primeonlinetutors.in">primeonlinetutors.in</a></p>
+      <div class="benefit-card">
+        <h3>Personalized Tutoring</h3>
+        <p>Each student gets tailored lessons that match their learning pace and style for maximum effectiveness.</p>
       </div>
-      
-      <a href="[GOOGLE_FORM_LINK]" class="demo-btn" target="_blank">Book Your Free Demo Today!</a>
-      
-      <p style="margin-top: 30px; opacity: 0.9;">Start your journey to success with Prime Online Tutors – your results are our mission!</p>
+
+      <div class="benefit-card">
+        <h3>Periodic Assessments Conducted</h3>
+        <p>Regular mock tests and progress assessments ensure students are exam-ready and track steady improvement.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Feedback & Progress Reports</h3>
+        <p>Parents and students receive detailed progress reports, helping monitor strengths and areas of improvement.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Guaranteed Grade Improvement</h3>
+        <p>Our proven methodology and continuous practice sessions are designed to improve scores within weeks.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Safe & Secure Learning</h3>
+        <p>Learn from home with a secure, monitored, and comfortable digital environment that ensures student safety.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Global Access to Tutors</h3>
+        <p>Connect with expert tutors worldwide, accessing knowledge beyond geographical boundaries.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Affordable & Cost-Effective</h3>
+        <p>Eliminate travel expenses and benefit from flexible pricing while still getting world-class education.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Access to Digital Resources</h3>
+        <p>Recorded sessions, worksheets, practice tests, and revision materials available anytime for students.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Interactive Learning Tools</h3>
+        <p>Whiteboards, quizzes, and screen sharing make learning more engaging compared to traditional tutoring.</p>
+      </div>
+
     </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact Us</h3>
+    <p style="text-align:center;">Have questions? Reach out and start your learning journey today.</p>
+    <p style="text-align:center; margin-top:1rem;">
+      📧 Email: <a href="mailto:primeonlinetutor@gmail.in">mailto:primeonlinetutor@gmail.in</a><br>
+      📞 Phone: +91-7204977786
+    </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Prime Online Tutors. All Rights Reserved.</p>
-    <p style="margin-top: 10px; opacity: 0.7;">Empowering students to achieve their academic dreams through personalized online tutoring.</p>
+    <p>&copy; 2025 Prime Online Tutor. All Rights Reserved. | Designed with ❤️</p>
   </footer>
+
 </body>
 </html>
