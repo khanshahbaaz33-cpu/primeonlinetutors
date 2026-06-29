@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prime Online Tutors | Expert Math & Science Tutoring for AS/A Level Students</title>
-  <meta name="description" content="Prime Online Tutors offers personalized Math, Science, and AS/A Level tutoring online. Expert tutors, flexible scheduling, and guaranteed grade improvement. Contact us today." />
-  <meta property="og:title" content="Prime Online Tutors | Expert Math & Science Tutoring" />
-  <meta property="og:description" content="Personalized online tutoring for Math, Science, and AS/A Level students. Proven results, flexible scheduling, global tutors." />
+  <title>Online Math & Science Tutors for AS/A Level | Prime Online Tutors</title>
+  <meta name="description" content="Personalised online Math, Physics, Chemistry and Biology tutoring for Cambridge AS/A Level students. Expert tutors, flexible scheduling and parent progress updates." />
+  <link rel="canonical" href="https://primeonlinetutors.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Online Math & Science Tutors for AS/A Level | Prime Online Tutors" />
+  <meta property="og:description" content="Personalised online tutoring for Math, Science and Cambridge AS/A Level students with expert tutors, flexible scheduling and parent progress updates." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://placehold.co/1200x630/0F172A/F59E0B?text=Prime+Online+Tutors" />
+  <meta property="og:url" content="https://primeonlinetutors.com/" />
+  <meta property="og:image" content="https://primeonlinetutors.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Online Math & Science Tutors for AS/A Level | Prime Online Tutors" />
+  <meta name="twitter:description" content="Expert online Math, Physics, Chemistry and Biology tutoring for Cambridge AS/A Level students." />
+  <meta name="twitter:image" content="https://primeonlinetutors.com/og-image.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +26,7 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Prime Online Tutors",
-    "description": "Expert online tutoring for Math, Science, and AS/A Level students.",
+    "description": "Expert online Math, Physics, Chemistry and Biology tutoring for Cambridge AS/A Level students.",
     "url": "https://primeonlinetutors.com",
     "telephone": ["+91-7204977786", "+91-9739758578"],
     "email": "primeonlinetutors@gmail.com",
@@ -27,6 +34,47 @@
       "@type": "PostalAddress",
       "addressCountry": "IN"
     }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer Cambridge AS and A Level tutoring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Prime Online Tutors provides online tutoring for Cambridge AS and A Level students, including subject lessons, past paper practice, mark scheme walkthroughs and exam strategy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which subjects do you teach online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We teach Mathematics, Physics, Chemistry and Biology online, along with AS/A Level exam preparation and study strategy support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can students outside India join?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Students from India, UAE, USA, UK and other countries can join online sessions with flexible scheduling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do parents track progress?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parents receive regular progress updates, class reports, assessments and guidance on the student's strengths, gaps and next steps."
+        }
+      }
+    ]
   }
   </script>
 
@@ -621,6 +669,65 @@
       font-weight: 500;
       margin-top: 1rem;
     }
+    .form-note {
+      margin-top: 0.85rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .contact-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .contact-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 44px;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-sm);
+      color: var(--navy);
+      background: var(--white);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .contact-action:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    /* ── FAQ ── */
+    .faq-bg { background: var(--white); }
+    .faq-list {
+      max-width: 850px;
+      margin: 2rem auto 0;
+      display: grid;
+      gap: 1rem;
+    }
+    .faq-item {
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.4rem;
+      background: var(--slate-bg);
+    }
+    .faq-item h3 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+    }
+    .faq-item p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -674,6 +781,7 @@
       .hamburger { display: flex; }
       .about-inner,
       .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-actions { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .hero { padding: 3.5rem 1.5rem 3rem; }
       .hero-stats { gap: 1.5rem; }
@@ -696,6 +804,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#benefits">Why Us</a></li>
       <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Get Started</a></li>
     </ul>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
@@ -707,6 +816,7 @@
     <a href="#services" onclick="toggleMenu()">Services</a>
     <a href="#benefits" onclick="toggleMenu()">Why Us</a>
     <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
     <a href="#contact" onclick="toggleMenu()">Get Started</a>
   </div>
 </nav>
@@ -714,8 +824,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">Trusted by Students in India & UAE</div>
-  <h1>Learn with <em>Confidence.</em><br>Achieve with Clarity.</h1>
-  <p class="hero-sub">Expert online tutoring for Math, Science, and AS/A Level students — personalised to your pace, focused on results.</p>
+  <h1>Online Math & Science Tutors for <em>AS/A Level</em> Students</h1>
+  <p class="hero-sub">Expert personalised tutoring in Mathematics, Physics, Chemistry and Biology — built around your syllabus, pace and exam goals.</p>
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Book a Free Session</a>
     <a href="#services" class="btn-secondary">View Our Subjects</a>
@@ -766,7 +876,7 @@
 <section class="services-bg" id="services">
   <div class="section">
     <p class="section-eyebrow">What We Teach</p>
-    <h2 class="section-title">Subjects Tailored to Your Syllabus</h2>
+    <h2 class="section-title">Online Tutoring for Math, Physics, Chemistry and Biology</h2>
     <p class="section-sub">We cover core school subjects and exam-focused preparation, with special expertise in Cambridge AS & A Level curricula.</p>
     <div class="services-grid">
       <div class="service-card">
@@ -807,7 +917,7 @@
 <section class="process-bg">
   <div class="section">
     <p class="section-eyebrow">How It Works</p>
-    <h2 class="section-title">From First Contact to Top Grades</h2>
+    <h2 class="section-title">How Our Online Tutoring Process Works</h2>
     <p class="section-sub">Our simple four-step process gets your child learning with the right tutor within 24 hours.</p>
     <div class="process-steps">
       <div class="step">
@@ -882,6 +992,33 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq-bg" id="faq">
+  <div class="section">
+    <p class="section-eyebrow">Common Questions</p>
+    <h2 class="section-title">Online Tutoring FAQs</h2>
+    <p class="section-sub">Quick answers for parents and students considering online AS/A Level Math and Science tutoring.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Do you offer Cambridge AS and A Level tutoring?</h3>
+        <p>Yes. We support Cambridge AS and A Level students with subject lessons, past paper practice, mark scheme walkthroughs and exam strategy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which subjects do you teach online?</h3>
+        <p>We teach Mathematics, Physics, Chemistry and Biology, along with focused AS/A Level exam preparation and study planning.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can students outside India join?</h3>
+        <p>Yes. Students from India, UAE, USA, UK and other countries can join online classes with flexible scheduling across time zones.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do parents track progress?</h3>
+        <p>Parents receive regular progress updates, class reports, assessments and guidance on each student's strengths, gaps and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact-bg" id="contact">
   <div class="contact-inner">
@@ -907,43 +1044,49 @@
         </div>
       </div>
     </div>
-    <div class="contact-form">
+    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
       <h3>Send Us a Message</h3>
       <div class="form-row">
         <div class="form-group">
           <label for="fname">Parent / Student Name</label>
-          <input type="text" id="fname" placeholder="Your name" required />
+          <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" required />
         </div>
         <div class="form-group">
           <label for="phone">Phone / WhatsApp</label>
-          <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" />
+          <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" required />
         </div>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="you@email.com" required />
+        <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
       </div>
       <div class="form-group">
         <label for="subject">Subject Needed</label>
-        <select id="subject">
+        <select id="subject" name="subject" required>
           <option value="">Select a subject</option>
           <option>Mathematics</option>
           <option>Physics</option>
           <option>Chemistry</option>
           <option>Biology</option>
           <option>AS / A Level Preparation</option>
+          <option>IGCSE Preparation</option>
           <option>Multiple Subjects</option>
         </select>
       </div>
       <div class="form-group">
         <label for="message">Tell us about your goals</label>
-        <textarea id="message" placeholder="e.g. My son is in Grade 10 and struggling with trigonometry. Looking for 2 sessions per week..."></textarea>
+        <textarea id="message" name="message" placeholder="e.g. My son is in Grade 10 and struggling with trigonometry. Looking for 2 sessions per week..." required></textarea>
       </div>
-      <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
+      <button class="form-submit" type="submit">Open Email Message →</button>
+      <p class="form-note">Your email app will open with the enquiry details filled in. Please review and send the message from there.</p>
+      <div class="contact-actions">
+        <a class="contact-action" href="tel:+917204977786">Call Now</a>
+        <a class="contact-action" href="mailto:primeonlinetutors@gmail.com">Email Us</a>
+      </div>
       <div class="form-success" id="formSuccess">
-        ✅ Message received! We'll WhatsApp you within a few hours to confirm your free consultation.
+        Your email draft is ready. Please tap send in your email app to complete the enquiry.
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -990,17 +1133,39 @@
     goToSlide((currentSlide + 1) % slides.length);
   }, 4500);
 
-  // Form submit (demo — wire to Formspree/EmailJS in production)
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
     const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     const email = document.getElementById('email').value.trim();
-    if (!name || !email) {
-      alert('Please fill in your name and email to continue.');
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !email || !subject || !message) {
+      alert('Please fill in all required details to continue.');
       return;
     }
+
+    const emailSubject = `Tutoring enquiry for ${subject} - ${name}`;
+    const emailBody = [
+      'Hi Prime Online Tutors,',
+      '',
+      'I would like to book a free tutoring consultation.',
+      '',
+      `Name: ${name}`,
+      `Phone / WhatsApp: ${phone}`,
+      `Email: ${email}`,
+      `Subject needed: ${subject}`,
+      '',
+      'Goals / message:',
+      message,
+      '',
+      'Thank you.'
+    ].join('\n');
+
+    window.location.href = `mailto:primeonlinetutors@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     document.getElementById('formSuccess').style.display = 'block';
-    // In production: replace this with a fetch() to Formspree endpoint
-    // e.g. fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: formData })
   }
 </script>
 </body>
