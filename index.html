@@ -3,499 +3,1005 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prime Online Tutors</title>
+  <title>Prime Online Tutors | Expert Math & Science Tutoring for AS/A Level Students</title>
+  <meta name="description" content="Prime Online Tutors offers personalized Math, Science, and AS/A Level tutoring online. Expert tutors, flexible scheduling, and guaranteed grade improvement. Contact us today." />
+  <meta property="og:title" content="Prime Online Tutors | Expert Math & Science Tutoring" />
+  <meta property="og:description" content="Personalized online tutoring for Math, Science, and AS/A Level students. Proven results, flexible scheduling, global tutors." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/0F172A/F59E0B?text=Prime+Online+Tutors" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Prime Online Tutors",
+    "description": "Expert online tutoring for Math, Science, and AS/A Level students.",
+    "url": "https://primeonlinetutors.com",
+    "telephone": ["+91-7204977786", "+91-9739758578"],
+    "email": "primeonlinetutors@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0F172A;
+      --navy-mid: #1E293B;
+      --navy-light: #334155;
+      --gold: #F59E0B;
+      --gold-light: #FEF3C7;
+      --white: #FFFFFF;
+      --slate-bg: #F8FAFC;
+      --slate-border: #E2E8F0;
+      --text-muted: #64748B;
+      --text-body: #334155;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.06);
+      --shadow-md: 0 4px 16px rgba(15,23,42,0.10), 0 2px 6px rgba(15,23,42,0.06);
+      --shadow-lg: 0 10px 40px rgba(15,23,42,0.14);
     }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      background: #f9fafb;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text-body);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #4F46E5, #9333EA);
-      color: white;
-      padding: 2rem 2rem 1rem 2rem;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-    }
-    header h1 {
-      font-size: 3.5rem; /* Increased from 2.7rem */
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.22rem;
-    }
+
+    /* ── NAV ── */
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1.4rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(245,158,11,0.15);
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.07rem;
-      position: relative;
-      transition: color 0.3s;
-    }
-    nav a::after {
-      content: '';
-      display: block;
-      height: 2.5px;
-      width: 0;
-      background: #facc15;
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      transition: width 0.3s;
-    }
-    nav a:hover {
-      color: #facc15;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    /* HERO Animations */
-    .hero {
-      padding: 3rem 2rem 2rem 2rem;
-      text-align: center;
-      background: linear-gradient(120deg, #eef2ff 60%, #fff 100%);
-      position: relative;
-      animation: fadeinup 0.8s;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      animation: colorpop 0.7s;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      animation: fadeinup 0.95s;
-    }
-    @keyframes colorpop {
-      0% {
-        color: #aaa;
-      }
-      100% {
-        color: #4F46E5;
-      }
-    }
-    .hero button {
-      padding: 0.8rem 1.5rem;
-      border: none;
-      background: #4F46E5;
-      color: white;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(70, 40, 230, 0.07);
-      transition: background 0.25s, transform 0.2s;
-      font-weight: 700;
-      margin-top: 10px;
-      animation: popbtn 1s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-name: blink;
-      animation-duration: 1.2s;
-      animation-timing-function: linear;
-    }
-    .hero button:hover {
-      background: #facc15;
-      color: #333;
-      transform: scale(1.08);
-      animation: none;
-    }
-    @keyframes blink {
-      0%,
-      100% {
-        background: #4F46E5;
-        color: #fff;
-      }
-      50% {
-        background: #facc15;
-        color: #202060;
-      }
-    }
-    @keyframes fadeinup {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    @keyframes popbtn {
-      from {
-        transform: scale(0.3);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-    /* Sections */
-    .section {
-      padding: 3rem 2rem 2rem 2rem;
+    .nav-inner {
       max-width: 1100px;
       margin: auto;
-      animation: fadeinup 0.9s;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
     }
-    .section h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      text-align: center;
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
     }
-    /* CARD Animations */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.1rem;
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
     }
-    .card {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(80, 60, 180, 0.11);
-      text-align: center;
-      transition: box-shadow 0.2s, transform 0.2s, background 0.3s;
-      animation: fadeincard 1.1s;
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: #FBBF24; transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
       cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+      display: block;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--navy-mid);
+      padding: 1rem 2rem;
+      gap: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu.open { display: flex; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .card:hover {
-      box-shadow: 0 10px 32px rgba(70, 30, 180, 0.19);
-      background: #F3F0FF;
-      transform: scale(1.045) translateY(-6px);
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(245,158,11,0.10) 0%, transparent 70%);
+      pointer-events: none;
     }
-    @keyframes fadeincard {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    .card h4 {
-      color: #4F46E5;
-      font-size: 1.13rem;
-      margin-bottom: 0.7rem;
-    }
-    /* Testimonials Slider */
-    .testimonials {
-      background: #eef2ff;
-      padding: 38px 12px;
-      margin-top: 30px;
-      border-radius: 16px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 14px rgba(41, 51, 61, 0.08);
-      position: relative;
-      text-align: center;
-    }
-    .testimonial-slide {
-      display: none;
-      animation: fadeinup 0.7s;
-    }
-    .testimonial-slide.active {
-      display: block;
-    }
-    .test-nav {
-      margin-top: 18px;
-      user-select: none;
-    }
-    .test-btn {
+    .hero-eyebrow {
       display: inline-block;
-      background: #4F46E5;
-      color: #fff;
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      font-size: 1.2em;
-      line-height: 34px;
-      text-align: center;
-      font-weight: bold;
-      cursor: pointer;
-      margin: 0 8px;
-      border: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-      transition: background 0.2s;
-    }
-    .test-btn:hover {
-      background: #facc15;
-      color: #333;
-    }
-    /* Why Online Tutoring Section */
-    .why-online-tutoring {
-      background: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .why-online-tutoring h2 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #4F46E5;
-      margin-bottom: 40px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--gold);
+      background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.25);
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
     }
-    .benefits-grid {
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+      position: relative;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(245,158,11,0.35);
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: #FBBF24;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245,158,11,0.45);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.35rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── ABOUT / STRIP ── */
+    .about-strip {
+      background: var(--slate-bg);
+      border-top: 1px solid var(--slate-border);
+      border-bottom: 1px solid var(--slate-border);
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .about-text p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .about-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+    .about-checklist li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath d='M1 5l3 3 7-7' stroke='%230F172A' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .about-card {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card::before {
+      content: '📚';
+      position: absolute;
+      top: -10px; right: -10px;
+      font-size: 8rem;
+      opacity: 0.07;
+    }
+    .about-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--gold);
+    }
+    .about-card p { color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+    /* ── SERVICES ── */
+    .services-bg { background: var(--white); }
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 10px;
+      gap: 1.5rem;
+    }
+    .service-card {
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      border-color: rgba(245,158,11,0.4);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── PROCESS ── */
+    .process-bg { background: var(--slate-bg); border-top: 1px solid var(--slate-border); border-bottom: 1px solid var(--slate-border); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .step-num {
+      width: 52px; height: 52px;
+      background: var(--navy);
+      color: var(--gold);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .step h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── BENEFITS ── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
     }
     .benefit-card {
-      background: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 15px;
-      padding: 23px 18px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s;
-      text-align: left;
-      position: relative;
-      cursor: pointer;
-      color: #333;
-      transition: background 0.3s, color 0.3s, border-color 0.3s;
+      background: var(--slate-bg);
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
     }
     .benefit-card:hover {
-      transform: translateY(-10px) scale(1.04);
-      box-shadow: 0 14px 28px rgba(80, 60, 180, 0.17);
-      border-color: #4F46E5;
-      background: #4F46E5;
-      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+      box-shadow: var(--shadow-md);
     }
-    .benefit-card:hover h3 {
-      color: #facc15;
+    .benefit-card:hover h3,
+    .benefit-card:hover p { color: var(--white); }
+    .benefit-card:hover .b-icon { background: rgba(245,158,11,0.2); }
+    .b-icon {
+      font-size: 1.3rem;
+      background: var(--gold-light);
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      transition: background 0.2s;
     }
-    .benefit-card:hover p {
-      color: #fff;
+    .benefit-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; transition: color 0.2s; }
+    .benefit-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; transition: color 0.2s; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-bg { background: var(--navy); }
+    .testimonials-inner {
+      max-width: 800px;
+      margin: auto;
+      padding: 5rem 2rem;
+      text-align: center;
     }
-    .benefit-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 30px;
-    }
-    .benefit-card h3::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #4F46E5;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .benefit-card p {
-      font-size: 15px;
+    .testimonials-inner .section-eyebrow { margin-bottom: 0.5rem; }
+    .testimonials-inner .section-title { color: var(--white); margin-bottom: 2.5rem; }
+    .testimonial-slide { display: none; animation: fadeup 0.5s ease; }
+    .testimonial-slide.active { display: block; }
+    @keyframes fadeup { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    .testimonial-quote {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: rgba(255,255,255,0.9);
       line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 1.5rem;
     }
-    /* Contact Section */
-    #contact a {
-      color: #4F46E5;
+    .testimonial-author {
+      font-size: 0.85rem;
+      color: var(--gold);
       font-weight: 600;
+      letter-spacing: 0.04em;
     }
-    footer {
-      background: #111827;
-      color: #d1d5db;
+    .test-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 2rem;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+    }
+    .dot.active {
+      background: var(--gold);
+      transform: scale(1.3);
+    }
+
+    /* ── CONTACT ── */
+    .contact-bg { background: var(--slate-bg); border-top: 1px solid var(--slate-border); }
+    .contact-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .contact-info p { color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+    .contact-details { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+    .contact-item a { color: var(--navy); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .contact-item a:hover { color: var(--gold); }
+    .c-icon {
+      width: 40px; height: 40px;
+      background: var(--navy);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    /* Form */
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-form h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 1px solid var(--slate-border);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-body);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .form-success {
+      display: none;
       text-align: center;
       padding: 1.5rem;
-      margin-top: 2rem;
-      font-size: 0.99em;
-      letter-spacing: 0.3px;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: var(--radius-md);
+      color: #166534;
+      font-weight: 500;
+      margin-top: 1rem;
     }
-    footer a {
-      color: #facc15;
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
       text-decoration: none;
-      font-weight: 600;
+      z-index: 999;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    @media (max-width: 780px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .section h3 {
-        font-size: 1.3rem;
-      }
-      .benefits-grid,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+    }
+    .wa-float svg { width: 30px; height: 30px; }
+    .wa-tooltip {
+      position: absolute;
+      right: 70px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-inner,
+      .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero { padding: 3.5rem 1.5rem 3rem; }
+      .hero-stats { gap: 1.5rem; }
+      .section { padding: 3.5rem 1.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Prime Online Tutors</h1>
-    <p>Personalized Learning. Global Connections.</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#benefits">Benefits</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <h2>Learn Smarter, Not Harder</h2>
-    <p>Expert tutors in Math, Science, and more – guiding you to academic success.</p>
-    <a href="https://forms.gle/9ZyXiQZoTGMXNvzg9" target="_blank" rel="noopener noreferrer">
-      <button id="blinkBtn">Get Started</button>
-    </a>
-  </section>
-  <section class="section" id="about">
-    <h3>Why Choose Us?</h3>
-    <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem;">
-      At Prime Online Tutor, we believe in making education simple, effective, and accessible.
-      Our tutors bring years of experience in solving past papers, preparing for exams, and
-      building strong subject foundations.
-    </p>
-  </section>
-  <section class="section" id="services">
-    <h3>Our Services</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Math Tutoring</h4>
-        <p>Step-by-step guidance to solve complex problems and excel in exams.</p>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Prime <span>Tutors</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#benefits">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#benefits" onclick="toggleMenu()">Why Us</a>
+    <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="#contact" onclick="toggleMenu()">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Trusted by Students in India & UAE</div>
+  <h1>Learn with <em>Confidence.</em><br>Achieve with Clarity.</h1>
+  <p class="hero-sub">Expert online tutoring for Math, Science, and AS/A Level students — personalised to your pace, focused on results.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Book a Free Session</a>
+    <a href="#services" class="btn-secondary">View Our Subjects</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Students Tutored</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">95%</div>
+      <div class="stat-label">Grade Improvement Rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Countries Served</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-eyebrow">Who We Are</p>
+      <h2>Education That Adapts to Every Student</h2>
+      <p>At Prime Online Tutors, we believe every student learns differently. Our tutors don't follow a one-size-fits-all approach — they build a learning plan around your child's specific strengths, gaps, and goals.</p>
+      <ul class="about-checklist">
+        <li>Certified tutors with strong academic backgrounds</li>
+        <li>Daily class reports shared with parents</li>
+        <li>Sessions scheduled around your convenience</li>
+        <li>Special focus on AS/A Level past paper practice</li>
+        <li>Regular mock tests and progress assessments</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>Our Commitment</h3>
+      <p>We are committed to making quality education accessible to every student, regardless of geography. Whether you're in Bangalore, Dubai, or New Jersey — your tutor is just a click away, ready to help you reach your potential.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section">
+    <p class="section-eyebrow">What We Teach</p>
+    <h2 class="section-title">Subjects Tailored to Your Syllabus</h2>
+    <p class="section-sub">We cover core school subjects and exam-focused preparation, with special expertise in Cambridge AS & A Level curricula.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">➕</div>
+        <h3>Mathematics</h3>
+        <p>Step-by-step guidance through algebra, calculus, statistics, and problem-solving strategies that build lasting understanding.</p>
       </div>
-      <div class="card">
-        <h4>Science Tutoring</h4>
-        <p>Physics, Chemistry, Biology – simplified for better understanding.</p>
+      <div class="service-card">
+        <div class="service-icon">🔬</div>
+        <h3>Physics</h3>
+        <p>Concepts simplified with real-world examples. From mechanics to electromagnetism — we make Physics click.</p>
       </div>
-      <div class="card">
-        <h4>Exam Preparation</h4>
-        <p>Special focus on AS/A Level past papers to ensure top grades.</p>
+      <div class="service-card">
+        <div class="service-icon">🧪</div>
+        <h3>Chemistry</h3>
+        <p>Organic, inorganic, and physical chemistry covered in depth, with exam technique woven into every session.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧬</div>
+        <h3>Biology</h3>
+        <p>From cell biology to ecosystems — structured notes, diagrams, and past paper practice for every topic.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📝</div>
+        <h3>AS / A Level Prep</h3>
+        <p>Intensive past paper sessions, mark scheme walkthroughs, and timed practice to maximise your Cambridge scores.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <h3>Exam Strategy</h3>
+        <p>Learn how to read questions, manage time, and maximise marks — the skills that separate good students from top scorers.</p>
       </div>
     </div>
-  </section>
-  <section class="section" id="process">
-    <h3>Our Tutoring Process</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Personalized Curriculum</h4>
-        <p>We design a customized learning plan based on the student’s current knowledge level. Daily class reports are shared with parents for transparency and progress tracking.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-bg">
+  <div class="section">
+    <p class="section-eyebrow">How It Works</p>
+    <h2 class="section-title">From First Contact to Top Grades</h2>
+    <p class="section-sub">Our simple four-step process gets your child learning with the right tutor within 24 hours.</p>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Initial Assessment</h3>
+        <p>We evaluate your child's current level and identify specific knowledge gaps through a short diagnostic session.</p>
       </div>
-      <div class="card">
-        <h4>Exam & Test Preparation</h4>
-        <p>On-demand test prep sessions tailored for school exams, competitive assessments, and specific learning goals.</p>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Personalised Plan</h3>
+        <p>A customised curriculum is designed around your child's learning style, pace, and upcoming exams.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Weekly Sessions</h3>
+        <p>Live one-on-one sessions with interactive whiteboards, quizzes, and real-time feedback every week.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Progress Reports</h3>
+        <p>Parents receive detailed weekly reports tracking improvements, areas of focus, and upcoming milestones.</p>
       </div>
     </div>
-  </section>
-  <!-- Testimonials Slider -->
-  <section class="testimonials" id="testimonials">
-    <h3 style="font-size:1.42rem; color:#4F46E5; margin-bottom:1.3rem;">What Our Parents & Students Say</h3>
-    <div class="testimonial-slide active">
-      <p style="font-size:1.13em;">"Prime Online Tutors made math easy for my children—improved grades and confidence after just a few weeks!"<br />
-         <strong>- Vinitha, Parent (Washington, USA)</strong></p>
-    </div>
-    <div class="testimonial-slide">
-      <p style="font-size:1.13em;">"Consistent sessions and progress reports built my trust. It's the smartest learning investment we've made."<br />
-         <strong>- Nathaniel, Student (New Jersey, USA)</strong></p>
-    </div>
-    <div class="testimonial-slide">
-      <p style="font-size:1.13em;">"My tutor helped me ace my A-levels with extra practice on past papers. Highly recommend their experienced faculty!"<br />
-         <strong>- Armaan, Student (Dubai)</strong></p>
-    </div>
-    <div class="test-nav">
-      <button class="test-btn" onclick="showTestimonial(0)">1</button>
-      <button class="test-btn" onclick="showTestimonial(1)">2</button>
-      <button class="test-btn" onclick="showTestimonial(2)">3</button>
-    </div>
-  </section>
-  <!-- Why Online Tutoring Section -->
-  <section class="why-online-tutoring" id="benefits">
-    <h2>What Makes Online Tutoring a Better Option than Home Tuition?</h2>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="section">
+    <p class="section-eyebrow">Why Online Tutoring</p>
+    <h2 class="section-title">Better Than Home Tuition — Here's Why</h2>
+    <p class="section-sub">Online tutoring isn't just convenient — it gives your child access to better teachers, more flexibility, and measurable results.</p>
     <div class="benefits-grid">
-      <div class="benefit-card">
-        <h3>Highly-Qualified Tutors</h3>
-        <p>Our tutors are subject-certified with strong academic backgrounds and years of experience in preparing students for success.</p>
+      <div class="benefit-card"><div class="b-icon">🎓</div><h3>Highly-Qualified Tutors</h3><p>Subject-certified with strong academic backgrounds and years of exam preparation experience.</p></div>
+      <div class="benefit-card"><div class="b-icon">🕐</div><h3>Flexible Scheduling</h3><p>Early mornings, evenings, weekends — sessions planned around your family's routine.</p></div>
+      <div class="benefit-card"><div class="b-icon">🎯</div><h3>Personalised Learning</h3><p>Tailored lessons that match each student's pace and style for maximum effectiveness.</p></div>
+      <div class="benefit-card"><div class="b-icon">📊</div><h3>Regular Assessments</h3><p>Mock tests and progress checks ensure students are exam-ready at every stage.</p></div>
+      <div class="benefit-card"><div class="b-icon">📋</div><h3>Parent Progress Reports</h3><p>Detailed weekly updates so parents always know exactly where their child stands.</p></div>
+      <div class="benefit-card"><div class="b-icon">📈</div><h3>Guaranteed Improvement</h3><p>Our proven methodology is designed to improve grades within the first few weeks.</p></div>
+      <div class="benefit-card"><div class="b-icon">🔒</div><h3>Safe & Monitored</h3><p>Learn from home in a secure, supervised digital environment — full peace of mind for parents.</p></div>
+      <div class="benefit-card"><div class="b-icon">🌍</div><h3>Global Access</h3><p>Connect with expert tutors beyond your city. India, UAE, UK — wherever you are.</p></div>
+      <div class="benefit-card"><div class="b-icon">💰</div><h3>Cost-Effective</h3><p>No travel costs. Competitive pricing with world-class quality — better value than home tuition.</p></div>
+      <div class="benefit-card"><div class="b-icon">🖥️</div><h3>Interactive Tools</h3><p>Digital whiteboards, screen sharing, and quizzes make sessions more engaging than traditional tutoring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-bg" id="testimonials">
+  <div class="testimonials-inner">
+    <p class="section-eyebrow">Student & Parent Reviews</p>
+    <h2 class="section-title">Results That Speak for Themselves</h2>
+    <div id="testimonialSlider">
+      <div class="testimonial-slide active">
+        <p class="testimonial-quote">"Prime Online Tutors made math easy for my children — improved grades and confidence after just a few weeks!"</p>
+        <p class="testimonial-author">Vinitha, Parent — Washington, USA</p>
       </div>
-      <div class="benefit-card">
-        <h3>Flexible Scheduling</h3>
-        <p>Plan sessions around your convenience, whether early mornings, evenings, or weekends — learning that adapts to you.</p>
+      <div class="testimonial-slide">
+        <p class="testimonial-quote">"Consistent sessions and progress reports built my trust. It's the smartest learning investment we've made."</p>
+        <p class="testimonial-author">Nathaniel, Student — New Jersey, USA</p>
       </div>
-      <div class="benefit-card">
-        <h3>Personalized Tutoring</h3>
-        <p>Each student gets tailored lessons that match their learning pace and style for maximum effectiveness.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Periodic Assessments Conducted</h3>
-        <p>Regular mock tests and progress assessments ensure students are exam-ready and track steady improvement.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Feedback & Progress Reports</h3>
-        <p>Parents and students receive detailed progress reports, helping monitor strengths and areas of improvement.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Guaranteed Grade Improvement</h3>
-        <p>Our proven methodology and continuous practice sessions are designed to improve scores within weeks.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Safe & Secure Learning</h3>
-        <p>Learn from home with a secure, monitored, and comfortable digital environment that ensures student safety.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Global Access to Tutors</h3>
-        <p>Connect with expert tutors worldwide, accessing knowledge beyond geographical boundaries.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Affordable & Cost-Effective</h3>
-        <p>Eliminate travel expenses and benefit from flexible pricing while still getting world-class education.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Interactive Learning Tools</h3>
-        <p>Whiteboards, quizzes, and screen sharing make learning more engaging compared to traditional tutoring.</p>
+      <div class="testimonial-slide">
+        <p class="testimonial-quote">"My tutor helped me ace my A-levels with extra practice on past papers. Highly recommend their experienced faculty!"</p>
+        <p class="testimonial-author">Armaan, Student — Dubai, UAE</p>
       </div>
     </div>
-  </section>
-  <section class="section" id="contact">
-    <h3>Contact Us</h3>
-    <p style="text-align:center;">Have questions? Reach out and start your learning journey today.</p>
-    <p style="text-align:center; margin-top:1rem;">
-      📧 Email: <a href="mailto:primeonlinetutors@gmail.com">primeonlinetutors@gmail.com</a><br />
-      📞 Phone: +91-7204977786 & +91-9739758578 
-    </p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Prime Online Tutors. All Rights Reserved. | Designed with ❤️</p>
-  </footer>
-  <script>
-    // Testimonials Slider Functionality
-    function showTestimonial(idx) {
-      let slides = document.querySelectorAll('.testimonial-slide');
-      slides.forEach((slide, i) => slide.classList.remove('active'));
-      if (slides[idx]) slides[idx].classList.add('active');
+    <div class="test-dots">
+      <button class="dot active" onclick="goToSlide(0)" aria-label="Review 1"></button>
+      <button class="dot" onclick="goToSlide(1)" aria-label="Review 2"></button>
+      <button class="dot" onclick="goToSlide(2)" aria-label="Review 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2>Start Your Child's Journey Today</h2>
+      <p>Have questions or ready to book? Reach out and we'll get back to you within a few hours. First session consultation is free.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="c-icon">📧</div>
+          <a href="mailto:primeonlinetutors@gmail.com">primeonlinetutors@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">📞</div>
+          <div>
+            <a href="tel:+917204977786">+91 72049 77786</a><br>
+            <a href="tel:+919739758578">+91 97397 58578</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">💬</div>
+          <a href="https://wa.me/917204977786" target="_blank" rel="noopener">WhatsApp us directly</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Parent / Student Name</label>
+          <input type="text" id="fname" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject Needed</label>
+        <select id="subject">
+          <option value="">Select a subject</option>
+          <option>Mathematics</option>
+          <option>Physics</option>
+          <option>Chemistry</option>
+          <option>Biology</option>
+          <option>AS / A Level Preparation</option>
+          <option>Multiple Subjects</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell us about your goals</label>
+        <textarea id="message" placeholder="e.g. My son is in Grade 10 and struggling with trigonometry. Looking for 2 sessions per week..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
+      <div class="form-success" id="formSuccess">
+        ✅ Message received! We'll WhatsApp you within a few hours to confirm your free consultation.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span id="yr"></span> Prime Online Tutors. All Rights Reserved. |
+    <a href="mailto:primeonlinetutors@gmail.com">primeonlinetutors@gmail.com</a>
+  </p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/917204977786?text=Hi%2C%20I%27m%20interested%20in%20tutoring%20sessions%20from%20Prime%20Online%20Tutors." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="16" fill="#25D366"/>
+    <path d="M22.5 9.5A8.9 8.9 0 0016 7a8.93 8.93 0 00-7.73 13.38L7 25l4.74-1.24A8.93 8.93 0 0016 24.93 8.93 8.93 0 0025 16a8.9 8.9 0 00-2.5-6.5zM16 23.3a7.4 7.4 0 01-3.78-1.03l-.27-.16-2.81.74.75-2.74-.18-.28A7.43 7.43 0 0116 8.7a7.43 7.43 0 010 14.86zm4.07-5.56c-.22-.11-1.32-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06a6.07 6.07 0 01-1.79-1.1 6.72 6.72 0 01-1.24-1.54c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.08-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.64-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.6.28-.2.22-.78.76-.78 1.86s.8 2.16.91 2.31c.11.15 1.58 2.41 3.83 3.38.54.23.96.37 1.28.47.54.17 1.03.15 1.42.09.43-.07 1.32-.54 1.5-1.06.19-.52.19-.97.13-1.06-.06-.1-.2-.16-.43-.27z" fill="white"/>
+  </svg>
+</a>
+
+<script>
+  // Auto year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Hamburger
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Testimonial slider
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function goToSlide(idx) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = idx;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  // Auto-advance testimonials
+  setInterval(() => {
+    goToSlide((currentSlide + 1) % slides.length);
+  }, 4500);
+
+  // Form submit (demo — wire to Formspree/EmailJS in production)
+  function handleSubmit() {
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!name || !email) {
+      alert('Please fill in your name and email to continue.');
+      return;
     }
-    // Benefit Card Animation on Hover (for accessibility)
-    document.querySelectorAll('.benefit-card').forEach(card => {
-      card.addEventListener('mouseenter', function () {
-        this.style.zIndex = 3;
-      });
-      card.addEventListener('mouseleave', function () {
-        this.style.zIndex = 1;
-      });
-    });
-  </script>
+    document.getElementById('formSuccess').style.display = 'block';
+    // In production: replace this with a fetch() to Formspree endpoint
+    // e.g. fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: formData })
+  }
+</script>
 </body>
 </html>
-
